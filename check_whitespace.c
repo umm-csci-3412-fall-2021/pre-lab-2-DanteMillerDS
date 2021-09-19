@@ -66,7 +66,10 @@ int is_clean(char* str) {
   // 0 if they're equal, and a positive value if the first is
   // greater than the second.
   result = strcmp(str, cleaned);
-  free(cleaned);
+  //
+  if(strlen(cleaned)!= 0){ // checks and sees if cleaned needs to be free 
+  free(cleaned); // free the memory of cleaned
+  }
   return result == 0;
 }
 
